@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // add listener for each beer and fetch the detail about specific beer
 
     document.addEventListener('click', function(event){
+        event.preventDefault()
         let specificBeerId = event.target.parentNode.dataset.id 
         console.log(specificBeerId)
 
@@ -45,28 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
         let div = document.getElementById("beer-detail")
         div.dataset.id = beerDetail.id
 
-        let h1 = document.createElement('h1')
-        h1.innerHTML = beerDetail.name
-        div.appendChild(h1)
+        div.innerHTML = `<h1>${beerDetail.name}</h1>
+                        <img src=${beerDetail.image_url}>
+                        <h3>${beerDetail.tagline}</h3>
+                        <p>${beerDetail.description}</p>`
 
         
-        let img = document.createElement('img')
-        img.src = `${beerDetail.image_url}`
-        div.appendChild(img)
-
-        let h3 = document.createElement('h3')
-        h3.innerHTML = `${beerDetail.tagline}`
-        div.appendChild(h3)
-
-
-        let p = document.createElement('p')
-        p.innerHTML = `${beerDetail.description}`
-        div.appendChild(p)
-
     }
     
 
 
 
 })
-    
+
+
+// let h1 = document.createElement('h1')
+//         h1.innerHTML = beerDetail.name
+//         div.appendChild(h1)
+
+//         let img = document.createElement('img')
+//         img.src = beerDetail.image_url
+//         div.appendChild(img)
+
+//         let h3 = document.createElement('h3')
+//         h3.innerHTML = beerDetail.tagline
+//         div.appendChild(h3)
+
+
+//         let p = document.createElement('p')
+//         p.innerHTML = beerDetail.description
+//         div.appendChild(p)
