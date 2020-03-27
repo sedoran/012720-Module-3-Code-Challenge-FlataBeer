@@ -61,21 +61,6 @@
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
-      "id": 6,
-      "name": "Electric India",
-      "tagline": "Vibrant Hoppy Saison.",
-      "first_brewed": "05/2013",
-      "description": "wow so good!",
-      "image_url": "https://images.punkapi.com/v2/6.png",
-      "food_pairing": [
-        "Mussels with a garlic and herb sauce",
-        "Crab melt sandwich",
-        "Shortbread cookies"
-      ],
-      "brewers_tips": "Source some really good heather honey to get the right spicy esters in the beer.",
-      "contributed_by": "Sam Mason <samjbmason>"
-    },
-    {
       "id": 7,
       "name": "AB:12",
       "tagline": "Imperial Black Belgian Ale.",
@@ -103,21 +88,6 @@
         "Clootie dumpling"
       ],
       "brewers_tips": "Authentic heather honey adds a beautiful floral top note that is unachievable any other way.",
-      "contributed_by": "Sam Mason <samjbmason>"
-    },
-    {
-      "id": 9,
-      "name": "Bramling X",
-      "tagline": "Single Hop IPA Series - 2011.",
-      "first_brewed": "01/2011",
-      "description": "Good old Bramling Cross is elegant, refined, assured, (boring) and understated. Understated that is unless you hop the living daylights out of a beer with it. This is Bramling Cross re-invented and re-imagined, and shows just what can be done with English hops if you use enough of them. Poor Bramling Cross normally gets lost in a woeful stream of conformist brown ales made by sleepy cask ale brewers. But not anymore. This beer shows that British hops do have some soul, and is a fruity riot of blackberries, pears, and plums. Reminds me of the bramble, apple and ginger jam my grandmother used to make.",
-      "image_url": "https://images.punkapi.com/v2/10.png",
-      "food_pairing": [
-        "Warm blackberry pie",
-        "Vinegar doused fish and chips",
-        "Aromatic korma curry with lemon and garlic naan"
-      ],
-      "brewers_tips": "Getting good Bramling Cross is key. Most English hops are in leaf form (not pelletised), so getting fresh hops close to harvest (September) will give this beer the right amount of dark berry intensity.",
       "contributed_by": "Sam Mason <samjbmason>"
     },
     {
