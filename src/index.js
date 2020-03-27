@@ -1,6 +1,8 @@
 const BASE_URL = "http://localhost:3000/beers/"
 const ul = document.getElementById('beer-list')
 const div = document.getElementById('beer-detail')
+const editBeer = document.getElementById('edit-beer')
+const description = document.getElementById('description')
 
     
     //fetch beers from Api 
@@ -36,8 +38,35 @@ const getBeerDetail = () => {
             <h1>${beer.name}</h1>
             <img src="${beer.image_url}">
             <h3>${beer.tagline}</h3>
-            <p>${beer.description}</p>`
+            <textarea id="description">${beer.description}</textarea>
+            <button id=“edit-beer” class=“btn btn-info”>Save</button>
+            `
         })
 
     })
+    updateBeer(id, beer.description)
+
 }
+
+const updateBeer = (id) => {
+    div.addEventListener("click", event => {
+       if(event.target.innerText === 'Save'){
+           fetch(`${BASE_URL}${id}`, {
+               method: "patch",
+               header: {
+                'Content-Type': 'application/json',
+                "Accept": "application/json"
+               },
+               body: JSON.stringify(beer)
+           })
+       }
+   })
+}
+//grab the from document
+//add event listerner
+//get new value
+//fetch patch
+
+
+
+
