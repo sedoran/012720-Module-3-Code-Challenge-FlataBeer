@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/beers"
+const BASE_URL = "http://localhost:3000/beers/"
 const ul = document.getElementById('beer-list')
 
     
@@ -6,21 +6,29 @@ const ul = document.getElementById('beer-list')
     //display all beers
     //display single beer info when you click on beer
 
-document.addEventListener('DOMConetentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     getBeers()
+    getBeerDetail()
 })
 
 const getBeers = () => {
     fetch(BASE_URL)
     .then(response => response.json())
     .then(beers => {
-        console.log(beers)
         beers.forEach(beer => {
         let li = document.createElement('li')
+        li.className="list-group-item"
+        li.id=beer.id
             ul.append(li)
             li.innerText=`${beer.name}`
-            // ul.innerHTML+=`
-            // <li class="list-group-item">${beer.name}</li>`
         })
+    })
+}
+
+const getBeerDetail = () => {
+    ul.addEventListener('click', event => {
+        id = event.target.id
+        fetch(`BASE_URL`)
+
     })
 }
