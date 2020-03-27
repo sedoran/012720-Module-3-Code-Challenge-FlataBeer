@@ -34,7 +34,6 @@ function beerShow() {
         .then(resp => resp.json())
         .then(beer => renderBeerShow(beer))
     })
-
 }
 
 // render that beer's showpage
