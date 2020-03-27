@@ -1,5 +1,6 @@
 const BASE_URL = "http://localhost:3000/beers/"
 const ul = document.getElementById('beer-list')
+const div = document.getElementById('beer-detail')
 
     
     //fetch beers from Api 
@@ -28,7 +29,15 @@ const getBeers = () => {
 const getBeerDetail = () => {
     ul.addEventListener('click', event => {
         id = event.target.id
-        fetch(`BASE_URL`)
+        fetch(`${BASE_URL}${id}`)
+        .then(response => response.json())
+        .then(beer => {
+            div.innerHTML=`
+            <h1>${beer.name}</h1>
+            <img src="${beer.image_url}">
+            <h3>${beer.tagline}</h3>
+            <p>${beer.description}</p>`
+        })
 
     })
 }
