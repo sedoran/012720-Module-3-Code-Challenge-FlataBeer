@@ -3,7 +3,6 @@ const beerUrl = "http://localhost:3000/beers"
 document.addEventListener("DOMContentLoaded", function() {
     // console.log("Happy Friday")
     getBeers()
-    // getBeer()
 })
 
 const getBeers = () => {
@@ -26,7 +25,6 @@ const renderBeer = beer => {
     li.className = "list-group-item"
     li.id = beer.id
     li.innerText = beer.name
-    console.log(beer)
     return li
 }
 
@@ -37,7 +35,6 @@ const singleBeer = () => {
         getBeer(beerId)
     })
 }
-
 
 const getBeer = (beerId) =>{
     fetch(`${beerUrl}/${beerId}`)
@@ -56,4 +53,3 @@ const singleBeerDetails = (beer) => {
     console.log("inside beerDetail",div)
     return div
 }
-
