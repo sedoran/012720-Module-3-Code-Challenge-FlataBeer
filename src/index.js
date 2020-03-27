@@ -44,10 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function addBeerDetailToBrowser(beerDetail){
         let div = document.getElementById("beer-detail")
         div.dataset.id = beerDetail.id
-        div.innerHTML = `<h1>${beerDetail.name}</h1>
-                         <img src=${beerDetail.image_url}>
-                         <h3>${beerDetail.tagline}</h3>
-                         <p>${beerDetail.description}</p>`
+
+        let h1 = document.createElement('h1')
+        h1.innerHTML = beerDetail.name
+        div.appendChild(h1)
+
+        
+        let img = document.createElement('img')
+        img.src = `${beerDetail.image_url}`
+        div.appendChild(img)
+
+        let h3 = document.createElement('h3')
+        h3.innerHTML = `${beerDetail.tagline}`
+        div.appendChild(h3)
+
+
+        let p = document.createElement('p')
+        p.innerHTML = `${beerDetail.description}`
+        div.appendChild(p)
+
     }
     
 
